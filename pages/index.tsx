@@ -42,7 +42,6 @@ export default function Gallery({ images }: { images: Image[] }) {
         {images.map((image) => (
           <BlurImage key={image.id} image={image} />
         ))}
-        
 
       </div>
 
@@ -57,7 +56,7 @@ const BlurImage = ({ image }: { image: Image }) => {
   const [isLoading, setLoading] = useState(true);
 
   return (
-    
+
     <a href={image.href} className="group">
 
       <div className="aspect-w-1 aspect-h-1 xl:aspect-w-7 xl:aspect-h-8 w-full overflow-hidden rounded-lg bg-gray-200">
@@ -78,11 +77,19 @@ const BlurImage = ({ image }: { image: Image }) => {
 
       </div>
 
-      <h3 className="mt-4 text-sm text-gray-700">
-        {image.name}
-      </h3>
+      <div className='flex justify-between'>
 
-      <p className="mt-1 text-lg font-medium text-gray-700">
+        <h3 className="mt-4 text-sm text-gray-700">
+          {image.name}
+        </h3>
+
+        <h3 id="imageTag" className="mt-4 text-sm text-gray-700 bg-green-100 text-green-800 px-4 py-2 rounded-lg">
+          {image.tag}
+        </h3>
+
+      </div>
+      
+      <p className="underline mt-1 text-lg font-medium text-gray-700">
         @{image.username}
       </p>
 
