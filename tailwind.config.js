@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      poppins: ['poppins', 'Poppins', 'sans-serif'],
+    },
   },
   plugins: [require('@tailwindcss/aspect-ratio')],
 }
