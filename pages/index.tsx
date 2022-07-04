@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import { TagIcon } from '@heroicons/react/solid'
-import Link from 'next/link';
 
 export async function getStaticProps() {
   const supabaseAdmin = createClient(
@@ -85,17 +84,19 @@ const BlurImage = ({ image }: { image: Image }) => {
           {image.name}
         </h3>
 
-        <span id="imageTag" className="mt-4 text-sm text-gray-700 bg-white border-2 border-gray-700 px-4 py-2 rounded-lg">
+        <div id="imageTag" className="mt-4 text-sm text-gray-700 bg-white border-2 border-gray-700 px-4 py-2 rounded-lg">
           
-          <span className='flex mx-auto justify-between align-middle items-center'>
+          <div className='flex mx-auto justify-between align-middle items-center'>
 
-            
+            <TagIcon className="h-4 w-4"/>
 
-            
+            <p className='ml-2'>
+              {image.category}
+            </p>
 
-          </span>
+          </div>
 
-        </span>
+        </div>
 
       </div>
       
