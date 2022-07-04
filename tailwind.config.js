@@ -8,6 +8,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       poppins: ['poppins', 'Poppins', 'sans-serif'],
+      'baunk': ['baunk', 'Baunk'],
     },
   },
   plugins: [require('@tailwindcss/aspect-ratio')],
