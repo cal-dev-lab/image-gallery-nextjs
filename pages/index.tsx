@@ -92,7 +92,7 @@ const BlurImage = ({ image }: { image: Image }) => {
             <TagIcon className="h-4 w-4"/>
 
             <span className='ml-2'>
-              {image.tag}
+              {image.category}
             </span>
 
             
