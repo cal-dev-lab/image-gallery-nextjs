@@ -89,11 +89,7 @@ const BlurImage = ({ image }: { image: Image }) => {
           
           <span className='flex mx-auto justify-between align-middle items-center'>
 
-            <TagIcon className="h-4 w-4"/>
-
-            <span className='ml-2'>
-              {image.category}
-            </span>
+            
 
             
 
