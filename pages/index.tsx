@@ -30,6 +30,7 @@ type Image = {
   imageSrc: string
   name: string
   username: string
+  tag: string
 }
 
 export default function Gallery({ images }: { images: Image[] }) {
@@ -91,7 +92,7 @@ const BlurImage = ({ image }: { image: Image }) => {
             <TagIcon className="h-4 w-4"/>
 
             <p className='ml-2'>
-              {image.category}
+              {image.tag}
             </p>
 
           </div>
