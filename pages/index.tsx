@@ -39,6 +39,10 @@ export default function Gallery({ images }: { images: Image[] }) {
 
     <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
 
+      <h3 className='text-6xl mb-10 font-space underline'>
+        Gallery
+      </h3>
+
       <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
 
         {images.map((image) => (
@@ -59,9 +63,9 @@ const BlurImage = ({ image }: { image: Image }) => {
 
   return (
 
-    <a href={image.href} className="group">
+    <a href={image.href} className="group rounded-lg">
 
-      <div className="aspect-w-1 aspect-h-1 xl:aspect-w-7 xl:aspect-h-8 w-full overflow-hidden rounded-lg bg-gray-200">
+      <div className="aspect-w-1 aspect-h-1 xl:aspect-w-7 xl:aspect-h-8 w-full overflow-hidden rounded-t-lg bg-white">
 
         <Image
           alt=""
@@ -81,17 +85,17 @@ const BlurImage = ({ image }: { image: Image }) => {
 
       <div className='flex justify-between'>
 
-        <h3 className="mt-4 text-sm text-gray-700">
+        <h3 className="mt-4 text-md text-gray-700">
           {image.name}
         </h3>
 
-        <div id="imageTag" className="mt-4 text-sm text-gray-700 bg-white border-2 border-gray-700 px-4 py-2 rounded-lg">
+        <div id="imageTag" className="mt-2 text-sm text-gray-400 px-4 py-2">
           
           <div className='flex mx-auto justify-between align-middle items-center'>
 
             <TagIcon className="h-4 w-4"/>
 
-            <p className='ml-2'>
+            <p className='ml-2 font-medium'>
               {image.tag}
             </p>
 
@@ -101,7 +105,7 @@ const BlurImage = ({ image }: { image: Image }) => {
 
       </div>
       
-      <p className="underline mt-1 text-lg font-medium text-gray-700">
+      <p className="underline text-xl font-medium text-gray-700">
         @{image.username}
       </p>
 
