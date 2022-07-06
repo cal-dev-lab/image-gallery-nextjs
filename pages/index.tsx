@@ -39,7 +39,7 @@ export default function Gallery({ images }: { images: Image[] }) {
 
     <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
 
-      <h3 className='text-6xl mb-10 font-space underline'>
+      <h3 className='text-6xl mb-10 font-baunk underline'>
         Gallery
       </h3>
 
@@ -65,7 +65,7 @@ const BlurImage = ({ image }: { image: Image }) => {
 
     <a href={image.href} className="group rounded-lg">
 
-      <div className="aspect-w-1 aspect-h-1 xl:aspect-w-7 xl:aspect-h-8 w-full overflow-hidden rounded-t-lg bg-white">
+      <div className="aspect-w-1 aspect-h-1 xl:aspect-w-7 xl:aspect-h-8 w-full overflow-hidden rounded-t-lg bg-transparent">
 
         <Image
           alt=""
