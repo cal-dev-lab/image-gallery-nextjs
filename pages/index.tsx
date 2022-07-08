@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
-import { TagIcon } from '@heroicons/react/solid'
+import { TagIcon } from '@heroicons/react/solid';
 
 export async function getStaticProps() {
   const supabaseAdmin = createClient(
